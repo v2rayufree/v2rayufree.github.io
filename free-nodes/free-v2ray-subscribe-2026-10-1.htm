@@ -347,6 +347,11 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>VMess AEAD 加密在安全性方面有何优势？</h5></div>
+    <div class="panel-body">
+        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下保证节点可用，提升数据安全和连接稳定性，同时降低被检测风险，确保长期安全访问。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
     <div class="panel-body">
         两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。<hr />    </div>
@@ -357,9 +362,14 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
         Potatso Lite 是 iOS 上的一款代理客户端，操作简单、界面清爽，适合基础用户。它支持 Shadowsocks、Vmess 等协议，提供流量统计和节点切换功能。虽然功能不如 Quantumult X 强大，但非常易用且稳定。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan 协议支持 UDP 吗？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 可以用于 Android 吗？</h5></div>
     <div class="panel-body">
-        支持。Trojan 在最新版本中已支持 UDP 转发，能够满足游戏、视频会议等实时性需求较高的应用场景，性能和兼容性都有明显提升。<hr />    </div>
+        Matsuri 主要针对桌面平台开发，目前并未推出 Android 版本。但可使用其配置文件在兼容的客户端（如 Nekobox 或 Clash Android）中加载以获得类似体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 的配置文件可以与 Clash 通用吗？</h5></div>
+    <div class="panel-body">
+        Surfboard 基于 Clash 核心，因此支持大部分 YAML 配置文件，但部分字段如 rule-provider、external-controller 等可能不兼容。建议使用订阅转换工具将 Clash 文件转换为 Surfboard 兼容格式导入。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何设置不同用户的带宽限制？</h5></div>
@@ -367,14 +377,9 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
         管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 可以用于 Android 吗？</h5></div>
+    <div class="panel-heading"><h5>Clash 的自定义规则组能实现哪些功能？</h5></div>
     <div class="panel-body">
-        Matsuri 主要针对桌面平台开发，目前并未推出 Android 版本。但可使用其配置文件在兼容的客户端（如 Nekobox 或 Clash Android）中加载以获得类似体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>VMess AEAD 加密在安全性方面有何优势？</h5></div>
-    <div class="panel-body">
-        AEAD 加密可防止数据篡改、重放攻击和流量特征泄露。在高封锁环境下保证节点可用，提升数据安全和连接稳定性，同时降低被检测风险，确保长期安全访问。<hr />    </div>
+        Clash 的自定义规则组允许用户将多个节点和策略组合，通过优先级和条件分流流量。这样可以根据网站类别或流量类型自动选择最优节点，提高网络效率和使用体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS 相比 VMess 的主要改进是什么？</h5></div>
@@ -382,19 +387,14 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
         VLESS 是 VMess 的后继协议，移除了加密层以减少服务器资源消耗，同时提供更灵活的加密与传输方式选择。它更轻量、可扩展性更好，常被用于与 XTLS 等新传输协议搭配使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan 协议支持 UDP 吗？</h5></div>
+    <div class="panel-body">
+        支持。Trojan 在最新版本中已支持 UDP 转发，能够满足游戏、视频会议等实时性需求较高的应用场景，性能和兼容性都有明显提升。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名有什么要求？</h5></div>
     <div class="panel-body">
-        Trojan 的伪装域名必须是可以通过 HTTPS 正常访问的真实网站，并且 SSL 证书有效。伪装域名用于与服务器证书匹配，使得流量在外观上完全与正常 HTTPS 请求一致。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 的自定义规则组能实现哪些功能？</h5></div>
-    <div class="panel-body">
-        Clash 的自定义规则组允许用户将多个节点和策略组合，通过优先级和条件分流流量。这样可以根据网站类别或流量类型自动选择最优节点，提高网络效率和使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 的配置文件可以与 Clash 通用吗？</h5></div>
-    <div class="panel-body">
-        Surfboard 基于 Clash 核心，因此支持大部分 YAML 配置文件，但部分字段如 rule-provider、external-controller 等可能不兼容。建议使用订阅转换工具将 Clash 文件转换为 Surfboard 兼容格式导入。    </div>
+        Trojan 的伪装域名必须是可以通过 HTTPS 正常访问的真实网站，并且 SSL 证书有效。伪装域名用于与服务器证书匹配，使得流量在外观上完全与正常 HTTPS 请求一致。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -442,16 +442,16 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-10-2-free-v2ray.htm" title="V2rayU Free - 10月2日22.3M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月2日22.3M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-13.htm" title="V2rayU Free - 9月13日21M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月13日21M/S|免费Trojan节点/SSR节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-16-free-shadowrocket-node.htm" title="V2rayU Free - 9月16日18.6M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/SSR节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月16日18.6M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-27.htm" title="V2rayU Free - 9月27日20.2M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月27日20.2M/S|免费Trojan节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-clash-node-daily-updates.htm" title="V2rayU Free - 9月20日21.9M/S|免费Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月20日21.9M/S|免费Singbox节点/Trojan节点/Clash节点/V2ray节点/Shadowrocket节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-ssr-node-2026-9-7.htm" title="V2rayU Free - 9月7日21.7M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月7日21.7M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-10-7.htm" title="V2rayU Free - 10月7日21.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月7日21.2M/S|免费Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-28-free-v2ray.htm" title="V2rayU Free - 9月28日22.7M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月28日22.7M/S|免费Trojan节点/V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-5.htm" title="V2rayU Free - 9月5日21.3M/S|免费Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月5日21.3M/S|免费Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-9-12-free-v2ray.htm" title="V2rayU Free - 9月12日18.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月12日18.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-v2ray.htm" title="V2rayU Free - 9月2日22.2M/S|免费Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月2日22.2M/S|免费Trojan节点/Singbox节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-15.htm" title="V2rayU Free - 9月15日20.7M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月15日20.7M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-23.htm" title="V2rayU Free - 9月23日18.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月23日18.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-9-11.htm" title="V2rayU Free - 9月11日18.7M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月11日18.7M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-free-ssr-subscribe.htm" title="V2rayU Free - 9月6日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月6日21.5M/S|免费Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-windows-2026-9-25.htm" title="V2rayU Free - 9月25日22.8M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月25日22.8M/S|免费Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-free-clash.htm" title="V2rayU Free - 9月10日23M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月10日23M/S|免费V2ray节点/SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -463,7 +463,7 @@ A：只要使用正规节点并不开启日志记录，配合HTTPS加密协议�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
