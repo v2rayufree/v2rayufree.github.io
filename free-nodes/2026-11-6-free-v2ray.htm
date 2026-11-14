@@ -371,31 +371,6 @@ Clash拍子支持包括Vmess（V2Ray）、Shadowsocks等多种协议，满足不
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提升访问体验？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何通过规则文件优化节点分流？</h5></div>
-    <div class="panel-body">
-        Clash 支持自定义规则文件，可按域名、IP 或应用类型分流流量。结合策略组使用，可将不同类型的流量自动分配到最优节点，提高访问速度和网络稳定性，减少延迟和卡顿。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
-    <div class="panel-body">
-        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点排序功能如何提升访问效率？</h5></div>
-    <div class="panel-body">
-        Matsuri 会定期测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理不同流量。提升网页浏览、视频播放和游戏访问速度，减少掉线和卡顿。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
-    <div class="panel-body">
-        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Mellow 有哪些优势？</h5></div>
     <div class="panel-body">
         Mellow 是一个轻量化的跨平台代理客户端，采用透明代理和规则路由技术。它支持 V2Ray、Trojan 等协议，适用于 macOS、Windows 等操作系统。Mellow 运行稳定、资源占用低，非常适合后台长期使用。<hr />    </div>
@@ -406,9 +381,19 @@ Clash拍子支持包括Vmess（V2Ray）、Shadowsocks等多种协议，满足不
         Surfboard 的规则语法与 Quantumult X 相似，但并非完全兼容。部分策略组或脚本需手动修改格式方能正常使用，因此不建议直接复制，最好通过转换工具处理。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 模式如何隐藏流量特征？</h5></div>
+    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提升访问体验？</h5></div>
     <div class="panel-body">
-        Reality 模式通过伪装握手和真实网站特征，使流量难以被 DPI 检测。结合策略组使用，可有效隐藏节点通信特征，同时保持安全和高速传输，适合高封锁环境。<hr />    </div>
+        Shadowrocket 会测速节点延迟和丢包率，并优先使用低延迟节点。结合策略组和分流规则，可保证网页、视频和游戏流量通过最优节点，提高访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点排序功能如何提升访问效率？</h5></div>
+    <div class="panel-body">
+        Matsuri 会定期测速节点延迟，并结合策略组自动选择延迟低、稳定性高的节点处理不同流量。提升网页浏览、视频播放和游戏访问速度，减少掉线和卡顿。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
+    <div class="panel-body">
+        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Trojan 的伪装域名为何重要？</h5></div>
@@ -416,9 +401,24 @@ Clash拍子支持包括Vmess（V2Ray）、Shadowsocks等多种协议，满足不
         伪装域名必须是真实可访问的网站，且证书有效。它用于伪装流量，使 Trojan 的数据在外观上完全像正常 HTTPS 请求，从而有效降低被封锁和 DPI 检测的风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>何为 fake-ip 模式，它的优缺点是什么？</h5></div>
+    <div class="panel-heading"><h5>Clash 如何通过规则文件优化节点分流？</h5></div>
     <div class="panel-body">
-        fake-ip 是通过伪造 DNS 返回的 IP 地址让客户端透明代理流量，优点是兼容性好、无需修改应用代理设置；缺点是可能导致某些证书校验或 SNI 伪装失效，需要配合 DNS 与证书策略谨慎使用。    </div>
+        Clash 支持自定义规则文件，可按域名、IP 或应用类型分流流量。结合策略组使用，可将不同类型的流量自动分配到最优节点，提高访问速度和网络稳定性，减少延迟和卡顿。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + Reality 模式如何隐藏流量特征？</h5></div>
+    <div class="panel-body">
+        Reality 模式通过伪装握手和真实网站特征，使流量难以被 DPI 检测。结合策略组使用，可有效隐藏节点通信特征，同时保持安全和高速传输，适合高封锁环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何备份 Clash 配置文件？</h5></div>
+    <div class="panel-body">
+        Clash 的配置文件通常位于程序目录或配置文件夹中（如 Windows 下的 .config/clash）。用户可直接复制该 YAML 文件以备份，也可将订阅链接保存，便于后续恢复或在其他设备上同步使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>WinXray 的 PAC 模式如何应用？</h5></div>
+    <div class="panel-body">
+        PAC 模式根据规则自动判断流量是否走代理，无需手动切换节点。适合访问国内外混合网站环境，提高网络访问速度和稳定性，减少误操作导致的访问失败。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -466,16 +466,16 @@ Clash拍子支持包括Vmess（V2Ray）、Shadowsocks等多种协议，满足不
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-9-8-clash-node-daily-updates.htm" title="V2rayU Free - 9月8日20.5M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月8日20.5M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-21.htm" title="V2rayU Free - 10月21日22.2M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月21日22.2M/S|免费Singbox节点/Clash节点/V2ray节点/Trojan节点/SSR节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-10-19.htm" title="V2rayU Free - 10月19日19.6M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月19日19.6M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-11-3.htm" title="V2rayU Free - 11月3日22.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月3日22.6M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-v2ray-subscribe-2026-10-13.htm" title="V2rayU Free - 10月13日19.5M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月13日19.5M/S|免费Singbox节点/V2ray节点/Shadowrocket节点/Clash节点/Trojan节点/SSR节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-10-14-clash-node-daily-updates.htm" title="V2rayU Free - 10月14日21.2M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月14日21.2M/S|免费Clash节点/Trojan节点/SSR节点/Singbox节点/V2ray节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-11-5.htm" title="V2rayU Free - 11月5日18.8M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月5日18.8M/S|免费Shadowrocket节点/V2ray节点/SSR节点/Trojan节点/Clash节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-10-31.htm" title="V2rayU Free - 10月31日22M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月31日22M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/Trojan节点/SSR节点/Clash节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-10-3.htm" title="V2rayU Free - 10月3日18.7M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月3日18.7M/S|免费SSR节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-12-free-v2ray.htm" title="V2rayU Free - 9月12日18.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月12日18.8M/S|免费SSR节点/V2ray节点/Trojan节点/Singbox节点/Clash节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-26-node-share.htm" title="V2rayU Free - 10月26日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月26日20.9M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-8-clash-v2ray-ss-ssr.htm" title="V2rayU Free - 10月8日20.3M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月8日20.3M/S|免费Trojan节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-9-23.htm" title="V2rayU Free - 9月23日18.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 9月23日18.6M/S|免费Clash节点/Shadowrocket节点/SSR节点/V2ray节点/Trojan节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-11-2-clash-node.htm" title="V2rayU Free - 11月2日19M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月2日19M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-4-free-clash.htm" title="V2rayU Free - 11月4日19.4M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月4日19.4M/S|免费Clash节点/V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/shadowrocket-node-2026-10-15.htm" title="V2rayU Free - 10月15日18.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月15日18.7M/S|免费Clash节点/Shadowrocket节点/SSR节点/Singbox节点/V2ray节点/Trojan节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-11-10-clash-node-daily-updates.htm" title="V2rayU Free - 11月10日19.3M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月10日19.3M/S|免费SSR节点/Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-subscribe-node-2026-11-13.htm" title="V2rayU Free - 11月13日22.9M/S|免费Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 11月13日22.9M/S|免费Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-20-free-node-subscribe.htm" title="V2rayU Free - 10月20日22.3M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐">V2rayU Free - 10月20日22.3M/S|免费V2ray节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/Singbox节点节点推荐，V2rayC梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -487,13 +487,10 @@ Clash拍子支持包括Vmess（V2Ray）、Shadowsocks等多种协议，满足不
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
-            </li>
-                        <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                     </ul>
     </div>
